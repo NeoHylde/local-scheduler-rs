@@ -1,0 +1,1 @@
+Build a custom scheduler for handling multiple ollama sessions, using EEVDF linux scheduling principles for gpu acces
