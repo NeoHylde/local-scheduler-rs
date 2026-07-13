@@ -1,0 +1,19 @@
+# vramd.toml
+
+[server]
+listen_addr = "0.0.0.0:11435"
+upstream_addr = "127.0.0.1:11434"
+# upstream connect behavior
+connect_timeout_ms = 2000
+upstream_retry_backoff_ms = 500
+upstream_retry_max = 5
+
+[metrics]
+enabled = true
+listen_addr = "127.0.0.1:9090"
+# calibration: learn actual-tokens / estimated-tokens ratio per model
+estimator_calibration = true
+
+[logging]
+level = "info"                    # trace|debug|info|warn|error  (or just use RUST_LOG env)
+format = "pretty"                 # pretty|json
